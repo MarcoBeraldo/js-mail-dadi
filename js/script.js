@@ -18,7 +18,7 @@ if (emails.includes(mail)) {
 } else console.log("non ha accesso")
 
 
-
+console.log("*******************************************************************")
 
 // Gioco dei dadi
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
@@ -30,3 +30,17 @@ if (emails.includes(mail)) {
 // Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 
 
+// genero un numero a caso da 1 a 6 per l'utente
+const userNumber = parseInt(Math.floor(Math.random() * (6 - 1 + 1) + 1));
+console.log('Il tuo numero: ' + userNumber)
+
+// genero un numero a caso da 1 a 6 per il computer
+const pcNumber = parseInt(Math.floor(Math.random() * (6 - 1 + 1) + 1));
+console.log('Il numero del pc: ' + pcNumber)
+
+// verifico il vincitore
+if (userNumber > pcNumber) {
+    console.log('Hai vinto!');
+} else if (pcNumber > userNumber) {
+    console.log('Hai perso!');
+} else console.log('Pareggio!')
